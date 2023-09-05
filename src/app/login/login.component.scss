@@ -1,0 +1,25 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register{
+    padding: 20px;
+}
+
+.class{
+    width: 500px;
+    margin: auto;
+    border: 1px solid;
+    padding: 20px;
+}
+input{
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.silver{
+    color:black;
+    text-align: center !important;
+}

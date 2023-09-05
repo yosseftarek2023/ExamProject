@@ -1,0 +1,32 @@
+<div class="register mt-2" dir="rtl">
+    <h3 class="silver m-auto">تسجيل دخول</h3>
+    <div class="form mt-3">
+        <form action="" [formGroup]="form">
+            <div class="row text-center class">
+                <div class="form-check d-flex mb-3">
+                    <input class="form-check-input ms-2" type="radio" value="students" (change)="getRole($event)" formControlName="selectedType" name="selectedType" id="flexRadioDefault1">
+                    <label class="form-check-label ms-3" for="flexRadioDefault1">
+                        طالب
+                    </label>
+                    <input class="form-check-input ms-2" type="radio" value="teachers" (change)="getRole($event)" formControlName="selectedType" name="selectedType" id="flexRadioDefault2">
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        مدرس                    
+                    </label>
+                </div>
+                
+                <div class="col-md-6 col-sm-12 mb-5 ">
+                    <input type="email" class="form-control" formControlName="email" placeholder="البريد الالكتروني">
+                </div>
+                <div class="col-md-6 col-sm-12 mb-5">
+                    <input type="password" class="form-control" formControlName="password" placeholder="كلمة السر">
+                </div>
+                <div class="col-md-6 col-sm-12 mb-2">
+                    <a href="" class="text-dark">نسيت كلمة السر؟</a>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <button class="btn btn-dark" [disabled]="!form.valid" (click)="loginAccount()">تسجيل دخول</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

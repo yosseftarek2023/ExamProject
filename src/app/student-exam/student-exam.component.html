@@ -1,0 +1,38 @@
+<div class="examBox" dir="rtl">
+    <div class="examhead text-center"><h2>اختبار {{subject?.name}}</h2></div>
+    <div class="quizBox" *ngFor="let item of subject?.questions; let index = index">
+        <strong ><span class="text-danger">سؤال {{index+1}}</span> .  {{item.question}}</strong>
+        <div class="row mt-3" >
+            <div class="col-md-6 col-sm-12">
+                <mat-radio-button value="{{item.answer1}}" (change)="getAnswer($event)" *ngIf="user?.role == 'students'&& !showRes && allowed" name="{{index}}" color="warn"></mat-radio-button>
+                <label>أ. {{item.answer1}}</label>
+            </div>
+
+            <div class="col-md-6 col-sm-12">
+                <mat-radio-button value=" {{item.answer2}}" (change)="getAnswer($event)" *ngIf="user?.role == 'students'&& !showRes && allowed"  name="{{index}}" color="warn"></mat-radio-button>
+                <label>ب. {{item.answer2}}</label>
+            </div>
+
+            <div class="col-md-6 col-sm-12">
+                <mat-radio-button  *ngIf="user?.role == 'students' && !showRes && allowed" (change)="getAnswer($event)" value="{{item.answer3}}" name="{{index}}" color="warn"  ></mat-radio-button>
+                <label>ج. {{item.answer3}}</label>
+            </div>
+
+            <div class="col-md-6 col-sm-12">
+                <mat-radio-button value="{{item.answer4}}" color="warn" (change)="getAnswer($event)" name="{{index}}" *ngIf="user?.role == 'students'&& !showRes && allowed" ></mat-radio-button>
+                <label>د. {{item.answer4}}</label>
+            </div>
+        </div>
+        <div class="text-start" *ngIf="user?.role == 'teachers'">
+            <button mat-raised-button  color="warn" (click)="delete(index)">حذف</button>
+        </div>
+        <hr>
+
+    </div>
+
+    <div class="text-center" *ngIf="user?.role == 'students'">
+        <button class="btn btn-success px-5 fs-5" (click)="showResult()"  *ngIf="!showRes && allowed"> النتيجة</button>
+        <span *ngIf="showRes || !allowed" class="btn btn-success" style="font-size: 2rem;">{{result}}/{{subject?.questions.length}}</span>
+    </div>
+
+</div>

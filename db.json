@@ -1,0 +1,121 @@
+{
+  "students": [
+    {
+      "name": "ahmed",
+      "email": "ahmed@ahmed",
+      "password": "ahmed",
+      "subject": [
+        {
+          "name": "علوم",
+          "id": "1",
+          "degree": 1
+        }
+      ],
+      "id": 1
+    },
+    {
+      "name": "mazen",
+      "email": "mazen@mazen",
+      "password": "mazen",
+      "subject": [
+        {
+          "name": "عربي",
+          "id": "1",
+          "degree": 1
+        }
+      ],
+      "id": 1
+    },
+    {
+      "name": "youssef",
+      "email": "youssef@youssef",
+      "password": "youssef",
+      "id": 2
+    },
+    {
+      "email": "a@a",
+      "password": "aa",
+      "subject": [
+        {
+          "name": "علوم",
+          "id": "1",
+          "degree": 0
+        }
+      ],
+      "id": 3
+    },
+    {
+      "email": "yassouf.tarek@gmail.com",
+      "password": "dd",
+      "subject": [
+        {
+          "name": "علوم",
+          "id": "1",
+          "degree": 1
+        }
+      ],
+      "id": 4
+    },
+    {
+      "email": "mm@m",
+      "password": "mm",
+      "subject": [
+        {
+          "name": "علوم",
+          "id": "1",
+          "degree": 1
+        }
+      ],
+      "id": 5
+    },
+    {
+      "name": "cc",
+      "email": "cc@c",
+      "password": "cc",
+      "subject": [
+        {
+          "name": "علوم",
+          "id": "1",
+          "degree": 1
+        }
+      ],
+      "id": 6
+    }
+  ],
+  "teachers": [
+    {
+      "name": "youssef",
+      "email": "yassouf.tarek@gmail.com",
+      "password": "hashedPasswordHere"
+    }
+  ],
+  "subjects": [
+    {
+      "name": "علوم",
+      "questions": [
+        {
+          "question": "عربي",
+          "answer1": "لب",
+          "answer2": "لبي",
+          "answer3": "لبي",
+          "answer4": "لبيل",
+          "correctAns": "لب"
+        },
+        {
+          "question": "عربي",
+          "answer1": "بي",
+          "answer2": "لبي",
+          "answer3": "لبي",
+          "answer4": "لبيل",
+          "correctAns": "لبيل"
+        }
+      ],
+      "id": 1
+    }
+  ],
+  "logins": [
+    {
+      "id": 1
+    }
+  ]
+}

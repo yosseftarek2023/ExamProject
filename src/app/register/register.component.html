@@ -1,0 +1,28 @@
+<div class="register mt-2" dir="rtl">
+    <h3 class="silver m-auto">انشاء حساب </h3>
+    <div class="form mt-3">
+        <form action="" [formGroup]="form">
+            <div class="row text-center class">
+                <div class="col-md-6 col-sm-12 mb-5 ">
+                    <input type="text" class="form-control" placeholder="الأسم" formControlName="name" name="name">
+                </div>
+                <div class="col-md-6 col-sm-12 mb-5">
+                    <input type="email" class="form-control" placeholder="البريد الالكتروني" formControlName="email">
+                </div>
+                <div class="col-md-6 col-sm-12 mb-5">
+                    <input type="password" class="form-control" placeholder="كلمة السر" formControlName="password">
+                </div>
+                <div class="col-md-6 col-sm-12 mb-5">
+                    <input type="password" class="form-control mb-3" placeholder="تأكيد كلمة السر" formControlName="confirmPass">
+                    <span *ngIf="!(form.value.password == form.value.confirmPass)" class="bg-warning fw-bold p-2 mt-5" style="color:rgb(0, 0, 0); border-radius: 5px;" > من فضلك اكد كلمة السر</span>
+                </div>
+                <div class="col-md-6 col-sm-12 mb-2">
+                    <a href="" class="text-dark">لدي حساب بالفعل</a>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <button class="btn btn-dark" [disabled]="!form.valid || (form.value.password !== form.value.confirmPass)" (click)="makeAccount()">انشاء حساب</button>
+                </div>
+            </div> 
+        </form>
+    </div>
+</div>
